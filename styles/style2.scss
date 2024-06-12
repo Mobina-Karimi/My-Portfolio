@@ -153,9 +153,9 @@ justify-content: space-around;
     }
 }
 
-@for $item from 1 through 7 {
+@for $item from 3 through 7 {
     .progress-moved#{$item} .progress-bar#{$item} {
-        width: 90%;
+        width: 60%;
         background-color: $thirdColor;
         animation: progress-bar#{$item} 6s;
     }
@@ -165,43 +165,91 @@ justify-content: space-around;
             background-color: $thirdColor;
         }
         100% {
-            width: 90%;
+            width: 60%;
             background-color: $thirdColor;
         }
     }
 }
-
-.progress-moved5 .progress-bar5 {
-    width: 60%;
+.progress-moved1 .progress-bar1 {
+    width: 85%;
     background-color: $thirdColor;
-    animation: progress-bar5 6s;
+    animation: progress-bar1 6s;
 }
 
-@keyframes progress-bar5 {
+@keyframes progress-bar1 {
     0% {
         width: 5%;
         background-color: $thirdColor;
     }
     100% {
-        width: 60%;
+        width: 85%;
+        background-color: $thirdColor;
+    }
+}
+.progress-moved2 .progress-bar2 {
+    width: 80%;
+    background-color: $thirdColor;
+    animation: progress-bar2 6s;
+}
+
+@keyframes progress-bar2 {
+    0% {
+        width: 5%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 80%;
         background-color: $thirdColor;
     }
 }
 
-@for $item from 8 through 9 {
-    .progress-moved#{$item} .progress-bar#{$item} {
-        width: 15%;
+// @each $item in 2, 4 {
+//     .progress-moved#{$item} .progress-bar#{$item} {
+//         width: 80%;
+//         background-color: $thirdColor;
+//         animation: progress-bar#{$item} 6s;
+//     }
+//     @keyframes progress-bar#{$item} {
+//         0% {
+//             width: 5%;
+//             background-color: $thirdColor;
+//         }
+//         100% {
+//             width: 80%;
+//             background-color: $thirdColor;
+//         }
+//     }
+// }
+
+.progress-moved9 .progress-bar9 {
+    width: 30%;
+    background-color: $thirdColor;
+    animation: progress-bar9 6s;
+}
+
+@keyframes progress-bar9 {
+    0% {
+        width: 5%;
         background-color: $thirdColor;
-        animation: progress-bar#{$item} 6s;
     }
-    @keyframes progress-bar#{$item} {
-        0% {
-            width: 5%;
-            background-color: $thirdColor;
-        }
-        100% {
-            width: 15%;
-            background-color: $thirdColor;
-        }
+    100% {
+        width: 30%;
+        background-color: $thirdColor;
+    }
+}
+.progress-moved8 .progress-bar8 {
+    width: 5%;
+    background-color: $thirdColor;
+    animation: progress-bar8 6s;
+}
+
+@keyframes progress-bar8 {
+    0% {
+        width: 1%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 5%;
+        background-color: $thirdColor;
     }
 }
