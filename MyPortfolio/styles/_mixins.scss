@@ -1,0 +1,21 @@
+@mixin overal {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin hamburgerStyle ($width, $height, $position) {
+    width: $width;
+    height: $height;
+    position: $position;
+}
+
+// @mixin displays($display, $justify-content, $align-items) {
+//     display: $display;
+//     justify-content: $justify-content;
+//     align-items: $align-items;
+// }
+@mixin borders {
+    border: 1px solid $firstColor;
+    border-radius: 50%;
+}

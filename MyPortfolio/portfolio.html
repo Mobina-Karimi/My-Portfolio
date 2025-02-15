@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="header" style="height:100vh">
+        <img src="images/header.jpg" alt="" id="headerimg">
+        <nav id="navbar">
+            <h1 class="logo">logo</h1>
+            <input type="checkbox" id="hamburger-toggle" />
+            <label for="hamburger-toggle" class="hamburger">
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contactme" id="contact">.Contact{}</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="cv"><a href="MobinaKarimi.pdf" download="MobinaKarimi" id="cv">Download CV</a></button>
+        <div class="txt-header">
+            <h5 id="welomeMessage">welcome</h5>
+            <h1 id="name">I'm Mobina Karimi</h1>
+            <p id="characteristics">A Front-End Web Developer</p>
+        </div>
+    </header>
+
+
+    <div id="about">
+        <div class="about">
+            <aside class="left">
+                <img class="aboutMe-img" src="images/m.jpg" alt="">
+            </aside>
+            <main class="right">
+                <h3 class="about-title">Who I Am</h3>
+                <h1 class="about-title2">About Me</h1>
+                <p>I’m Mobina Karimi, a front-end web developer and designer based in
+                    <span style="color: #508fc0">Iran, Tehran</span> . I've been building stuff on the web for the last 2 years, working with various frameworks and libraries. My focus is on creating engaging, accessible and performant interfaces for
+                    people.
+                </p>
+                <p>Currently, I am a student of Software engineering at
+                    <span style="color: #508fc0">Damghan University</span>.
+                </p>
+                <p>Being a diligent, hardworking and result oriented developer, I always work towards achieving best result on each project I lay my hands on.
+                </p>
+                <button class="myProject-btn"><a class="myProject-btn" href="#projects"> Projects</a></button>
+            </main>
+        </div>
+    </div>
+
+
+    <section id="projects">
+        <div class="projects">
+            <h1 class="projects-title">My Projects</h1>
+            <div class="main-container1">
+                <div class="container1">
+                    <div class = "card">
+                        <img src="images/RockPaperScissors.png" alt="">
+                        <div class="card-content">
+                          <h2>
+                            Rock Paper Scissors
+                          </h2>
+                          <!-- <p></p> -->
+                          <a href="https://mobina-karimi.github.io/Rock-Paper-Scissors-Game/RPSGame.html" class="button">
+                            Learn more...
+                            <!-- <span class="material-symbols-outlined">
+                              arrow_right_alt
+                            </span> -->
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container1">
+                    <div class = "card">
+                        <img src="images/Divar.png" alt="">
+                        <div class="card-content">
+                          <h2>
+                            Divar Web
+                          </h2>
+                          <!-- <p></p> -->
+                          <a href="#" class="button">
+                            Learn more ...
+                            <!-- <span class="material-symbols-outlined">
+                              arrow_right_alt
+                            </span> -->
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="main-container1">
+                <div class="container1">
+                    <div class = "card">
+                        <img src="#" alt="">
+                        <div class="card-content">
+                          <h2>
+                            Rock Paper Scissors
+                          </h2>
+                          <p></p>
+                          <a href="#" class="button">
+                            Find out more 
+                            <span class="material-symbols-outlined">
+                              arrow_right_alt
+                            </span>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container1">
+                    <div class = "card">
+                        <img src="#" alt="">
+                        <div class="card-content">
+                          <h2>
+                            Rock Paper Scissors
+                          </h2>
+                          <p></p>
+                          <a href="#" class="button">
+                            Find out more 
+                            <span class="material-symbols-outlined">
+                              arrow_right_alt
+                            </span>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <div class="skills">
+            <h1 class="skills-title">My Skills</h1>
+            <div class="main-container">
+                <div class="container">
+                    <div class="progress-title">
+                        <h3>HTML</h3>
+                        <h3>85%</h3>
+                    </div>
+                    <div class="progress progress-moved1">
+                        <div class="progress-bar1">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="progress-title">
+                        <h3>CSS</h3>
+                        <h3>80%</h3>
+                    </div>
+                    <div class="progress progress-moved2">
+                        <div class="progress-bar2">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="progress-title">
+                        <h3 style="font-size: 17px;">SASS</h3>
+                        <h3>60%</h3>
+                    </div>
+                    <div class=" progress progress-moved3 ">
+                        <div class="progress-bar3 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-container ">
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>ENGLISH</h3>
+                        <h3>60%</h3>
+                    </div>
+                    <div class="progress progress-moved4 ">
+                        <div class="progress-bar4 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>JS</h3>
+                        <h3>60%</h3>
+                    </div>
+                    <div class="progress progress-moved5 ">
+                        <div class="progress-bar5 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>Bootstrap</h3>
+                        <h3>60%</h3>
+                    </div>
+                    <div class="progress progress-moved6 ">
+                        <div class="progress-bar6 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-container ">
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>Responsive Web Design</h3>
+                        <h3>60%</h3>
+                    </div>
+                    <div class="progress progress-moved7 ">
+                        <div class="progress-bar7 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>REACT</h3>
+                        <h3>5%</h3>
+                    </div>
+                    <div class="progress progress-moved8 ">
+                        <div class="progress-bar8 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>Git</h3>
+                        <h3>20%</h3>
+                    </div>
+                    <div class="progress progress-moved9 ">
+                        <div class="progress-bar9 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="main-container ">
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>REDUX</h3>
+                        <h3>15%</h3>
+                    </div>
+                    <div class="progress progress-moved7 ">
+                        <div class="progress-bar7 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>Responsive Web Design</h3>
+                        <h3>15%</h3>
+                    </div>
+                    <div class="progress progress-moved8 ">
+                        <div class="progress-bar8 ">
+                        </div>
+                    </div>
+                </div>
+                <div class="container ">
+                    <div class="progress-title ">
+                        <h3>REST API</h3>
+                        <h3>15%</h3>
+                    </div>
+                    <div class="progress progress-moved9 ">
+                        <div class="progress-bar9 ">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <footer id="contactme">
+        <div class="contact-me">
+            <h1 class="contact-title">Contact Me</h1>
+            <h3>I am available to bring your ideas to life.</h3>
+            <div class="social-links">
+                <a href="#" target="_blank">
+                    <i class="fa fa-twitter" style="visibility: visible;"></i>
+                </a>
+                <a href="https://instagram.com/mobina.karimi._" target="_blank">
+                    <i class="fa fa-instagram" style="visibility: visible;"></i>
+                </a>
+                <a href="https://linkedin.com/in/mobina-karimi87" target="_blank">
+                    <i class="fa fa-linkedin" style="visibility: visible;"></i>
+                </a>
+                <a href="https://github.com/Mobina-Karimi" target="_blank">
+                    <i class="fa fa-github" style="visibility: visible;"></i>
+                </a>
+            </div>
+            <small>© 2023 Mobina Karimi </small>
+        </div>
+        <a href="#header" class="header-link" data-visible="true">
+            <span class="screen-reader-text">Back to Top</span>
+            <svg width="32" height="32" viewBox="0 0 100 100">
+            <path fill=" #000000a8 " d="m50 0c-13.262 0-25.98 5.2695-35.355 14.645s-14.645 22.094-14.645 35.355 5.2695 25.98 14.645 35.355 22.094 14.645 35.355 14.645 25.98-5.2695 35.355-14.645 14.645-22.094 14.645-35.355-5.2695-25.98-14.645-35.355-22.094-14.645-35.355-14.645zm20.832
+                            62.5-20.832-22.457-20.625 22.457c-1.207 0.74219-2.7656 0.57812-3.7891-0.39844-1.0273-0.98047-1.2695-2.5273-0.58594-3.7695l22.918-25c0.60156-0.61328 1.4297-0.96094 2.2891-0.96094 0.86328 0 1.6914 0.34766 2.293 0.96094l22.918 25c0.88672
+                            1.2891 0.6875 3.0352-0.47266 4.0898-1.1562 1.0508-2.9141 1.0859-4.1133 0.078125z "></path>
+             </svg>
+        </a>
+    </footer>
+</body>
+<script src="portfolio.js "></script>
+
+</html>

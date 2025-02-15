@@ -1,0 +1,103 @@
+@import "variables";
+@import "mixins";
+.contact-me {
+    text-align: center;
+    background-color: #a8a8a88b;
+}
+
+.contact-title {
+    text-align: center;
+    color: $thirdColor;
+    padding: 4rem 0;
+    &:after,
+    &:before {
+        @include hamburgerStyle(3%, 2px, relative);
+        background-color: $thirdColor;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:before {
+        right: 0.5rem;
+        margin-left: -50%;
+    }
+    &:after {
+        left: 0.5rem;
+        margin-right: -50%;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    a {
+        color: $firstColor;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        margin: 1.6rem 1.6rem;
+    }
+}
+
+.fa-twitter {
+    @include borders;
+    padding: 5px;
+    &:hover {
+        color: #00acee;
+        border: 1px solid #00acee;
+    }
+}
+
+.fa-instagram {
+    @include borders;
+    padding: 7px;
+    &:hover {
+        color: #cc2366;
+        border: 1px solid #cc2366;
+    }
+}
+
+.fa-linkedin {
+    @include borders;
+    padding: 7px;
+    &:hover {
+        color: #0e76a8;
+        border: 1px solid #0e76a8;
+    }
+}
+
+.fa-github {
+    @include borders;
+    padding: 7px;
+    &:hover {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+small {
+    color: #000000a8;
+}
+
+.header-link[data-visible=true] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-link {
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.5rem;
+    z-index: 15;
+}
+
+.screen-reader,
+.screen-reader-text {
+    @include hamburgerStyle(1px, 1px, absolute!important);
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+}

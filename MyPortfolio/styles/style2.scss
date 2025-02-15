@@ -1,0 +1,255 @@
+@import "variables";
+@import "mixins";
+#projects {
+    /* background-color: #bed9ed; */
+    height: 38rem;
+}
+
+.projects-title {
+    text-align: center;
+    color: $thirdColor;
+    padding: 5rem 0 2rem 0;
+    &:after {
+        background-color: $thirdColor;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 3%;
+    }
+    &:before {
+        background-color: $thirdColor;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 3%;
+    }
+}
+.main-container1{
+display: flex;
+justify-content: space-around;
+}
+.container1 {
+    margin-left: 4rem;
+    flex-direction: column;
+    // align-items: center;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+
+    .card {
+        width: 400px;
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.2);
+
+        img {
+            // position: absolute;
+            // object-fit: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: opacity 0.2s ease-out;
+            opacity: 55%;
+          }
+        h2 {
+            position: absolute;
+            inset: auto auto 30px 30px;
+            margin: 0;
+            transition: inset 0.3s 0.3s ease-out;
+            font-family: "Roboto Condensed", sans-serif;
+            font-weight: normal;
+            text-transform: uppercase;
+          }
+      }
+  }
+  .card p, .card a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity 0.3s ease-out;
+  }
+  .card p {
+    inset: auto auto 80px 30px;
+  }
+  .card a {
+    inset: auto auto 40px 30px;
+    color: #0af421;
+    text-shadow: 3px 3px 3px  #0af421;
+    text-decoration: none;
+  }
+  .card:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset 0.3s ease-out;
+  }
+  .card:hover p, .card:hover a {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s ease-in;
+  }
+  .card:hover img {
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+  }
+  
+  .material-symbols-outlined {
+    vertical-align: middle;
+  }
+
+
+.skills {
+    height: 50rem;
+}
+.skills-title {
+    text-align: center;
+    color: $thirdColor;
+    padding: 5.5rem 0 2rem 0;
+    &:after,
+    &:before {
+        @include hamburgerStyle(3%, 2px, relative);
+        background-color: $thirdColor;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    width: 400px;
+    background-color: #e2e1e1;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 7px #a8a8a8;
+    margin: 1.5rem;
+}
+
+.progress-title {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress {
+    border-radius: 25px;
+    background: #00000040;
+}
+
+@for $item from 1 through 12 {
+    .progress-bar#{$item} {
+        height: 18px;
+        border-radius: 25px;
+        transition: 0.4s linear;
+        transition-property: width, background-color;
+    }
+}
+
+@for $item from 3 through 7 {
+    .progress-moved#{$item} .progress-bar#{$item} {
+        width: 60%;
+        background-color: $thirdColor;
+        animation: progress-bar#{$item} 6s;
+    }
+    @keyframes progress-bar#{$item} {
+        0% {
+            width: 5%;
+            background-color: $thirdColor;
+        }
+        100% {
+            width: 60%;
+            background-color: $thirdColor;
+        }
+    }
+}
+.progress-moved1 .progress-bar1 {
+    width: 85%;
+    background-color: $thirdColor;
+    animation: progress-bar1 6s;
+}
+
+@keyframes progress-bar1 {
+    0% {
+        width: 5%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 85%;
+        background-color: $thirdColor;
+    }
+}
+.progress-moved2 .progress-bar2 {
+    width: 80%;
+    background-color: $thirdColor;
+    animation: progress-bar2 6s;
+}
+
+@keyframes progress-bar2 {
+    0% {
+        width: 5%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 80%;
+        background-color: $thirdColor;
+    }
+}
+
+// @each $item in 2, 4 {
+//     .progress-moved#{$item} .progress-bar#{$item} {
+//         width: 80%;
+//         background-color: $thirdColor;
+//         animation: progress-bar#{$item} 6s;
+//     }
+//     @keyframes progress-bar#{$item} {
+//         0% {
+//             width: 5%;
+//             background-color: $thirdColor;
+//         }
+//         100% {
+//             width: 80%;
+//             background-color: $thirdColor;
+//         }
+//     }
+// }
+
+.progress-moved9 .progress-bar9 {
+    width: 30%;
+    background-color: $thirdColor;
+    animation: progress-bar9 6s;
+}
+
+@keyframes progress-bar9 {
+    0% {
+        width: 5%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 30%;
+        background-color: $thirdColor;
+    }
+}
+.progress-moved8 .progress-bar8 {
+    width: 5%;
+    background-color: $thirdColor;
+    animation: progress-bar8 6s;
+}
+
+@keyframes progress-bar8 {
+    0% {
+        width: 1%;
+        background-color: $thirdColor;
+    }
+    100% {
+        width: 5%;
+        background-color: $thirdColor;
+    }
+}
