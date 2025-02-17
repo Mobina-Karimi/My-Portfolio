@@ -34,7 +34,6 @@ justify-content: space-around;
 }
 .container1 {
     margin-left: 4rem;
-    flex-direction: column;
     // align-items: center;
     padding: 10px;
     font-family: "Roboto", sans-serif;
@@ -251,5 +250,15 @@ justify-content: space-around;
     100% {
         width: 5%;
         background-color: $thirdColor;
+    }
+}
+
+@media (max-width: 740px){
+    .main-container1{
+        flex-direction: column;
+    }
+    .container1{
+        margin-top: 20px;
+        margin-left: 0rem;
     }
 }

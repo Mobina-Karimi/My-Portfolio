@@ -34,7 +34,6 @@
 
 .container1 {
   margin-left: 4rem;
-  flex-direction: column;
   padding: 10px;
   font-family: "Roboto", sans-serif;
 }
@@ -372,5 +371,14 @@
   100% {
     width: 5%;
     background-color: #204969;
+  }
+}
+@media (max-width: 740px) {
+  .main-container1 {
+    flex-direction: column;
+  }
+  .container1 {
+    margin-top: 20px;
+    margin-left: 0rem;
   }
 }/*# sourceMappingURL=style2.css.map */
