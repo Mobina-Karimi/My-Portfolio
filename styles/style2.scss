@@ -2,7 +2,7 @@
 @import "mixins";
 #projects {
     /* background-color: #bed9ed; */
-    height: 38rem;
+    height: 33rem;
 }
 
 .projects-title {
@@ -39,7 +39,7 @@ justify-content: space-around;
     font-family: "Roboto", sans-serif;
 
     .card {
-        width: 400px;
+        width: 350px;
         height: 200px;
         border-radius: 10px;
         overflow: hidden;

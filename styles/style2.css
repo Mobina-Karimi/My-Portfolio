@@ -1,6 +1,6 @@
 #projects {
   /* background-color: #bed9ed; */
-  height: 38rem;
+  height: 33rem;
 }
 
 .projects-title {
@@ -38,7 +38,7 @@
   font-family: "Roboto", sans-serif;
 }
 .container1 .card {
-  width: 400px;
+  width: 350px;
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
