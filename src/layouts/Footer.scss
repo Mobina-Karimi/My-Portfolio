@@ -1,0 +1,110 @@
+@use "/src/globalScss/variables" as variables;
+@use "/src/globalScss/mixins" as mixins;
+
+.contactMe {
+    text-align: center;
+    background-color: #a8a8a88b;
+
+    h2 {
+        text-align: center;
+        color: variables.$thirdColor;
+        padding: 2rem 0;
+        &:after,
+        &:before {
+            @include mixins.hamburgerStyle(3%, 2px, relative);
+            background-color: variables.$thirdColor;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:before {
+            right: 0.5rem;
+            margin-left: -50%;
+        }
+        &:after {
+            left: 0.5rem;
+            margin-right: -50%;
+        }
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+    a {
+        color: variables.$firstColor;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem;
+        visibility: visible;
+    }
+
+    .twitter {
+        @include mixins.borders;
+        font-size: 2rem;
+        padding: 5px;
+        &:hover {
+            color: #00acee;
+            border: 1px solid #00acee;
+        }
+    }
+    
+    .instagram {
+        @include mixins.borders;
+        font-size: 2rem;
+        padding: 7px;
+        &:hover {
+            color: #cc2366;
+            border: 1px solid #cc2366;
+        }
+    }
+    
+    .linkedin {
+        @include mixins.borders;
+        font-size: 2rem;
+        padding: 5px;
+        &:hover {
+            color: #0e76a8;
+            border: 1px solid #0e76a8;
+        }
+    }
+    
+    .github {
+        @include mixins.borders;
+        font-size: 2rem;
+        padding: 7px;
+        &:hover {
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+    
+}
+
+small {
+    color: #000000a8;
+}
+
+.headerLink[data-visible=true] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.headerLink {
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.5rem;
+    z-index: 15;
+     
+    span {
+        @include mixins.hamburgerStyle(1px, 1px, absolute!important);
+        clip: rect(1px, 1px, 1px, 1px);
+        overflow: hidden;
+    }
+}

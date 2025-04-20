@@ -1,0 +1,33 @@
+.code-editor {
+  display: flex;
+  border: none;
+  color: #ffffff;
+  font-family: monospace;   /* فونت مناسب برای کدنویسی */
+  margin: 5px;
+  width: 30rem;
+  height: 20rem;
+}
+
+.line-numbers {
+  width: 40px;
+  background-color: #3333341d;
+  color: #cccccc;
+  text-align: right;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.editor {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    background-color: #3333341d;
+    color: white;
+    white-space: pre-wrap; /* حفظ فرمت و انتقال خطوط */
+    word-wrap: break-word; /* انتقال خطوط طولانی */
+    font-family: monospace;
+    font-size: 14px;
+    overflow: auto;
+    resize: none;
+  }
+  

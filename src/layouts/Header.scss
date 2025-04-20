@@ -1,0 +1,89 @@
+@use "/src/globalScss/variables" as variables;
+@use "/src/globalScss/mixins" as mixins;
+
+
+.header {
+    height: 100vh;
+
+    img {
+        width: 100%;
+        position: absolute;
+        opacity: 0.3;
+        height: 100vh;
+    }
+}
+
+.navbar {
+    padding: 20px 25px;
+    background-color: #ebebebad;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    // position: fixed;
+    // top: 0;
+    // z-index: 1000; 
+
+    button {
+        cursor: pointer;
+        position: relative;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 40px;
+        background-color: variables.$thirdColor;
+        color: #fff;
+        box-shadow: 3px 3px 7px variables.$thirdColor;
+        text-decoration: none;
+
+        &:hover {
+            background-color: variables.$secondColor;
+            color: variables.$firstColor;
+            box-shadow: 1px 1px 5px variables.$secondColor;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    font-family: Verdana;
+    font-size: 16px;
+    cursor: pointer;
+
+    li {
+        margin-left: 30px;
+
+        &:hover {
+            color: variables.$thirdColor;
+            border-bottom: 2px solid variables.$thirdColor;
+        }
+    }
+}
+
+.contact {
+    color: variables.$secondColor;
+    &:hover {
+        border-bottom: 2px solid variables.$secondColor;
+    }
+}
+
+.txt-header {
+    padding-top: 12rem;
+    text-align: center;
+    
+   h5 {
+        padding: 0 1rem 2rem 2rem;
+        font-size: 30px;
+    }
+    h1 {
+        padding-left: 2rem;
+    }
+    p {
+        padding: 2.5rem 0 0 2rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,56 @@
+@use "/src/globalScss/variables" as variables;
+@use "/src/globalScss/mixins" as mixins;
+
+.about-title {
+    color: variables.$thirdColor;
+    margin: 3rem;
+
+    &:after {
+        @include mixins.hamburgerStyle(5%, 2px, relative);
+        background-color: variables.$thirdColor;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        left: 0.5rem;
+        margin-right: -50%;
+    }
+}
+.container {
+    width: 35rem;
+    height: 25rem;
+    background-color: #000000d0;
+    margin: 2rem 2rem 4rem 2rem;
+    border-radius: 10px;
+
+    .headerContainer {
+        background-color: #00000028;
+        height: 3rem;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+
+        .redCircle{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #ff0000e8;
+            justify-content: center;
+            margin: 1rem 5px 1rem 2rem;
+        }
+        .yellowCircle{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #ffff00af;
+            justify-content: center;
+            margin: 1rem 5px;
+        }
+        .greenCircle {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #008000eb;
+            justify-content: center;
+            margin: 1rem 5px;
+        }
+    }
+}

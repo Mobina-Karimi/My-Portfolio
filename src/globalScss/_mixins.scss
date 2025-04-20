@@ -1,0 +1,12 @@
+@use "/src/globalScss/variables" as variables;
+
+@mixin hamburgerStyle ($width, $height, $position) {
+    width: $width;
+    height: $height;
+    position: $position;
+}
+
+@mixin borders {
+    border: 1px solid variables.$firstColor;
+    border-radius: 50%;
+}
