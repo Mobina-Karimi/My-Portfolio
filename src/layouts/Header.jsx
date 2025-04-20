@@ -1,6 +1,6 @@
-import img from "../assets/header.jpg" 
-import pdfFile from "../assets/MobinaKarimi.pdf" 
-import "../layouts/Header.scss"
+import "./Header.scss";
+import img from "../assets/header.jpg";
+import pdfFile from "../assets/MobinaKarimi.pdf";
 
 function Header() {
     const downloadHandler = () => {
@@ -9,36 +9,27 @@ function Header() {
         link.download = "MobinaKarimi.pdf";
         link.click();
     };
-    
-    
-    const contactHandler = () => {
-        const contactElement = document.getElementById("contact");
-        if (contactElement) {
-            contactElement.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-    
-  return (
-    <div className="header" id="header">    
-        <img src={img} alt="headerImg"/>
-        <nav className="navbar">
-            <ul className="navList">
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li className="contact" onClick={contactHandler}>.Contact&#123;&#125;</li>
-            </ul>
-            <button onClick={downloadHandler} >Resume</button>
-        </nav>
-    
-        <div className="txt-header">
-            <h5>welcome</h5>
-            <h1>I'm Mobina Karimi</h1>
-            <p>A Front-End Web Developer</p>
-        </div>
-    </div>
-  )
+
+    return (
+        <header className="header" id="header">
+            <div className="overlay"></div>
+            <img src={img} alt="Header Background" />
+            <nav className="navbar">
+                <ul className="navList">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">.Contact&#123;&#125;</a></li>
+                </ul>
+                <button onClick={downloadHandler}>Download Resume</button>
+            </nav>
+            <div className="text-content">
+                <h1>Hi, I'm <span>Mobina Karimi</span></h1>
+                <p>Transforming ideas into beautiful web experiences.</p>
+            </div>
+        </header>
+    );
 }
 
-export default Header
+export default Header;

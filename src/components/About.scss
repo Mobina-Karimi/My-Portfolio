@@ -3,24 +3,43 @@
 
 .about-title {
     color: variables.$thirdColor;
-    margin: 3rem;
+    margin: 7rem 4rem 1rem 4rem;
+    text-align: center;
 
     &:after {
-        @include mixins.hamburgerStyle(5%, 2px, relative);
         background-color: variables.$thirdColor;
         content: "";
         display: inline-block;
+        height: 2px;
+        position: relative;
         vertical-align: middle;
-        left: 0.5rem;
-        margin-right: -50%;
+        width: 3%;
     }
+    &:before {
+        background-color: variables.$thirdColor;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 3%;
+    }
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
 }
 .container {
     width: 35rem;
     height: 25rem;
     background-color: #000000d0;
-    margin: 2rem 2rem 4rem 2rem;
+    margin: 2rem 2rem 4rem 4rem;
     border-radius: 10px;
+    &:hover{
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+        transform: scale(1.05);
+    }
 
     .headerContainer {
         background-color: #00000028;
@@ -53,4 +72,88 @@
             margin: 1rem 5px;
         }
     }
+}
+
+.box{
+    width: 13rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 2rem 17rem 2rem 2rem;
+
+    .pictureCard{
+        position: relative;
+        width: 370px;
+        height: 400px;
+        background: #fff;
+        margin: 0 auto;
+        border-radius: 4px;
+        box-shadow:0 2px 10px rgba(0,0,0,.2);
+        .imgBx{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+            background: #222;
+            transition: 0.5s;
+            z-index: 1;
+            &:hover{
+                bottom: 80px;
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .details{
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            height: 60px;
+            text-align: center;
+        }
+    }
+}
+.pictureCard .details h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #777;
+    text-transform: uppercase;
+    span{
+        font-weight: 500;
+        font-size: 12px;
+        color: #f38695;
+        display: block;
+        margin-top: 5px;
+    } 
+}  
+.pictureCard:before,
+.pictureCard:after
+{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index:-1;
+}
+.pictureCard:hover:before{
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0,0,0,.2);
+}
+.pictureCard:hover:after{
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }

@@ -1,0 +1,25 @@
+@use "/src/globalScss/variables" as variables;
+
+.projects-title {
+    text-align: center;
+    color: variables.$thirdColor;
+    padding: 5rem 0 2rem 0;
+    &:after {
+        background-color: variables.$thirdColor;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 3%;
+    }
+    &:before {
+        background-color: variables.$thirdColor;
+        content: "";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 3%;
+    }
+}

@@ -3,16 +3,21 @@
 
 .contactMe {
     text-align: center;
-    background-color: #a8a8a88b;
+    background: linear-gradient(45deg, #4a4a4a, #707070, #9c9c9c); 
+    padding: 2rem;
+    color: #fff;
 
     h2 {
-        text-align: center;
-        color: variables.$thirdColor;
-        padding: 2rem 0;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+
         &:after,
         &:before {
             @include mixins.hamburgerStyle(3%, 2px, relative);
-            background-color: variables.$thirdColor;
+            background-color: #fff;
             content: "";
             display: inline-block;
             vertical-align: middle;
@@ -26,85 +31,62 @@
             margin-right: -50%;
         }
     }
+
+    h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .social-links {
     display: flex;
     justify-content: center;
     padding: 1rem;
-    
+
     a {
-        color: variables.$firstColor;
+        color: #fff;
         font-size: 2rem;
-        width: 3rem;
-        height: 3rem;
-        margin: 1rem;
-        visibility: visible;
+        margin: 0.5rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
-    .twitter {
-        @include mixins.borders;
-        font-size: 2rem;
-        padding: 5px;
-        &:hover {
-            color: #00acee;
-            border: 1px solid #00acee;
-        }
+    .twitter:hover {
+        color: #00acee;
     }
-    
-    .instagram {
-        @include mixins.borders;
-        font-size: 2rem;
-        padding: 7px;
-        &:hover {
-            color: #cc2366;
-            border: 1px solid #cc2366;
-        }
-    }
-    
-    .linkedin {
-        @include mixins.borders;
-        font-size: 2rem;
-        padding: 5px;
-        &:hover {
-            color: #0e76a8;
-            border: 1px solid #0e76a8;
-        }
-    }
-    
-    .github {
-        @include mixins.borders;
-        font-size: 2rem;
-        padding: 7px;
-        &:hover {
-            color: #fff;
-            border: 1px solid #fff;
-        }
-    }
-    
-}
 
-small {
-    color: #000000a8;
-}
+    .instagram:hover {
+        color: #cc2366;
+    }
 
-.headerLink[data-visible=true] {
-    opacity: 1;
-    visibility: visible;
+    .linkedin:hover {
+        color: #0e76a8;
+    }
+
+    .github:hover {
+        color: #fff;
+    }
 }
 
 .headerLink {
     visibility: hidden;
     opacity: 0;
-    transition: .2s;
+    transition: opacity 0.5s ease;
     position: fixed;
     bottom: 1.2rem;
     right: 1.5rem;
     z-index: 15;
-     
-    span {
-        @include mixins.hamburgerStyle(1px, 1px, absolute!important);
-        clip: rect(1px, 1px, 1px, 1px);
-        overflow: hidden;
+
+    svg {
+        fill: #fff;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
