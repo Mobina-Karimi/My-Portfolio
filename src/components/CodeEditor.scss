@@ -30,4 +30,9 @@
     overflow: auto;
     resize: none;
   }
-  
+  @media screen and (max-width:767px) {
+    .code-editor {
+      width: 19rem;
+      height: 21rem;
+    }
+  }

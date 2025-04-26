@@ -23,3 +23,14 @@
         width: 3%;
     }
 }
+.cards{
+    display: flex;
+    justify-content: space-around;
+    // justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:767px) {
+    .cards{
+        flex-direction: column;
+    }
+}

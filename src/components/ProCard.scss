@@ -1,28 +1,10 @@
-// .cardContainer{
-//     width: 17rem;
-//     height: 25rem;
-//     border-radius: 5px;
-//     background-color: #a8a8a88b;
-//     margin: 0 2rem 2rem 2rem;
-//     padding: 17px;
-
-//     img{
-//         width: 15rem;
-//         height: 10rem;
-//         border-radius: 5px;
-//         display: flex;
-//         justify-content: center;
-//         margin-bottom: 2rem;
-//     }
-// }
 @use "/src/globalScss/variables" as variables;
 
 .cardContainer{
     width: 13rem;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 2rem 5rem 4rem;
+    flex-direction: row;
+    margin: 2rem 13rem 5rem 4rem;
 
     .card{
         position: relative;
@@ -114,6 +96,45 @@
     margin-bottom: 10px;
 }
 
+
+@media screen and (max-width:1023px) and (min-width:768px){
+    .cardContainer{
+        width: 13rem;
+        flex-direction: column;
+        margin: 2rem auto;
+        
+        .card{
+            .face{
+                width: 320px;
+            }
+            .face.face1 .content{
+                img{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) {
+   .cardContainer{
+        width: 13rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 7rem 5rem 0;
+        
+        .card{
+            .face{
+                width: 320px;
+            }
+            .face.face1 .content{
+                img{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
 // .cardContainer .card .face.face2 .content a{
 //     margin: 15px 0 0;
 //     display:  inline-block;

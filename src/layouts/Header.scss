@@ -92,3 +92,38 @@
         }
     }
 }
+.bottomNav {
+    display: none;
+}
+  
+
+@media (max-width: 767px) {
+    .navbar .navList {
+        display: none !important;
+    }
+    .bottomNav {
+      display: flex;
+      position: fixed; 
+      bottom: 0; 
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      background:  linear-gradient(45deg, #4a4a4a7c, #70707085, #9c9c9c86);
+      padding: 13px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+        
+        &:hover {
+          color: variables.$thirdColor;
+          transform: scale(1.1);
+        }
+      }
+    }
+}
+  

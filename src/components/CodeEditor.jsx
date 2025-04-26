@@ -3,16 +3,17 @@ import "./CodeEditor.scss";
 
 const CodeEditor = () => {
   const [code, setCode] = useState("");
-  const [lines, setLines] = useState(["1"]); 
+  const [lines, setLines] = useState(["1"]);
   const textAreaRef = useRef(null);
 
   useEffect(() => {
     // محاسبه خطوط براساس ارتفاع واقعی
     const textArea = textAreaRef.current;
     if (textArea) {
-      const lineHeight = parseInt(window.getComputedStyle(textArea).lineHeight, 10) || 20; 
-      const totalLines = Math.ceil(textArea.scrollHeight / lineHeight); 
-      setLines(Array.from({ length: totalLines }, (_, index) => index + 1)); 
+      const lineHeight =
+        parseInt(window.getComputedStyle(textArea).lineHeight, 10) || 20;
+      const totalLines = Math.ceil(textArea.scrollHeight / lineHeight);
+      setLines(Array.from({ length: totalLines }, (_, index) => index + 1));
     }
   }, [code]);
 
@@ -22,11 +23,13 @@ const CodeEditor = () => {
       const cursorPosition = e.target.selectionStart;
       const value = e.target.value;
       const newValue =
-        value.substring(0, cursorPosition) + "\n" + value.substring(cursorPosition);
+        value.substring(0, cursorPosition) +
+        "\n" +
+        value.substring(cursorPosition);
       setCode(newValue.replace(/\t/g, ""));
     }
   };
-  
+
   return (
     <div className="code-editor">
       <div className="line-numbers">
@@ -37,12 +40,12 @@ const CodeEditor = () => {
         ))}
       </div>
       <textarea
-      ref={textAreaRef}
-      className="editor"
-      value={code}
-      onChange={(e) => setCode(e.target.value)}
-      onKeyDown={handleKeyDown}
-      placeholder={`const Mobina = () => {
+        ref={textAreaRef}
+        className="editor"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder={`const Mobina = () => {
 
   pronouns: 'she' | 'her',
 
@@ -58,7 +61,6 @@ const CodeEditor = () => {
   return (<a onClick={Mobina}> About Me</a>);
       
 export default Mobina;`}
-      
       ></textarea>
     </div>
   );

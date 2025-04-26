@@ -13,62 +13,52 @@ function Footer() {
     }
   };
 
-  // Animation variants for smooth reveal
   const variants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
     <motion.div
       id="contact"
+      className="contactMe"
       initial="hidden"
       whileInView="visible"
       variants={variants}
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="contactMe">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          variants={variants}
-        >
-          Get In Touch
-        </motion.h2>
-        <motion.h5
-          initial="hidden"
-          whileInView="visible"
-          variants={variants}
-        >
-          I am available to bring your ideas to life.
-        </motion.h5>
-        <motion.div
-          className="social-links"
-          initial="hidden"
-          whileInView="visible"
-          variants={variants}
-        >
-          <a href="#" target="_blank">
-            <FaTwitter className="twitter" />
-          </a>
-          <a href="https://instagram.com/mobina.karimi._" target="_blank">
-            <IoLogoInstagram className="instagram" />
-          </a>
-          <a href="https://linkedin.com/in/mobina-karimi87" target="_blank">
-            <BiLogoLinkedin className="linkedin" />
-          </a>
-          <a href="https://github.com/Mobina-Karimi" target="_blank">
-            <FaGithub className="github" />
-          </a>
-        </motion.div>
-        <motion.small
-          initial="hidden"
-          whileInView="visible"
-          variants={variants}
-        >
-          © {new Date().getFullYear()} Mobina Karimi
-        </motion.small>
-      </div>
+      <motion.h2 initial="hidden" whileInView="visible" variants={variants}>
+        Get In Touch
+      </motion.h2>
+      <motion.h5 initial="hidden" whileInView="visible" variants={variants}>
+        I am available to bring your ideas to life.
+      </motion.h5>
+      <motion.div
+        className="social-links"
+        initial="hidden"
+        whileInView="visible"
+        variants={variants}
+      >
+        <a href="#" target="_blank">
+          <FaTwitter className="twitter" />
+        </a>
+        <a href="https://instagram.com/mobina.karimi._" target="_blank">
+          <IoLogoInstagram className="instagram" />
+        </a>
+        <a href="https://linkedin.com/in/mobina-karimi87" target="_blank">
+          <BiLogoLinkedin className="linkedin" />
+        </a>
+        <a href="https://github.com/Mobina-Karimi" target="_blank">
+          <FaGithub className="github" />
+        </a>
+      </motion.div>
+      <motion.small initial="hidden" whileInView="visible" variants={variants}>
+        © {new Date().getFullYear()} Mobina Karimi
+      </motion.small>
 
       <motion.a
         href="#header"

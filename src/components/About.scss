@@ -157,3 +157,29 @@
     transform: rotate(10deg);
     box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
+
+@media screen and (max-width:1023px) and (min-width:768px){
+    .about{
+        flex-direction: column;
+    }
+    .container{
+        margin: 4rem auto;
+    }
+    .box{
+        margin: 6rem auto;
+    }
+}
+@media screen and (max-width:767px) {
+    .about{
+        flex-direction: column;
+    }
+    .container{
+        margin: 4rem auto;
+        width: 20rem;
+        height: 25rem;
+    }
+    .box{
+        margin: 6rem auto;
+        width: 21rem;
+    }
+}
