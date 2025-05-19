@@ -2,6 +2,8 @@
 
 Welcome to my portfolio! As a passionate front-end developer, I specialize in crafting engaging, responsive, and dynamic user experiences. This site showcases my skills, projects, and creativity in building sleek, intuitive interfaces.
 
+<img src="https://github.com/Mobina-Karimi/Portfolio-Web/blob/main/MobinaWeb.png"/>
+
 ## What You'll Find Here
 
 <ul>
