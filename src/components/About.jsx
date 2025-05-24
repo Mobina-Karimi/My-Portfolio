@@ -34,7 +34,7 @@ function About() {
             whileInView="visible"
             variants={variants}
             viewport={{ once: true, amount: 0.5 }}
-          >
+            >
             <div className="headerContainer">
               <span className="redCircle"></span>
               <span className="yellowCircle"></span>

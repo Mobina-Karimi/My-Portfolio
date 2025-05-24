@@ -1,18 +1,12 @@
-## Project Description
+# React + Vite
 
-Welcome to my portfolio! As a passionate front-end developer, I specialize in crafting engaging, responsive, and dynamic user experiences. This site showcases my skills, projects, and creativity in building sleek, intuitive interfaces.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<img src="https://github.com/Mobina-Karimi/Portfolio-Web/blob/main/MobinaWeb.png"/>
+Currently, two official plugins are available:
 
-## What You'll Find Here
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-<ul>
- <li>Projects: A collection of my best work, including DivarWeb and ....</li>
- <li>Skills: Proficient in HTML, CSS, JavaScript, and frameworks like Bootstrap, Scss and React</li>
- <li>About Me: My journey in front-end development and dedication to clean, accessible, and high-performance design.</li>
- <li>Contact: Let’s connect! Reach out via linkdin and ...</li>
-</ul>
+## Expanding the ESLint configuration
 
-## My Website
-
-Check out my portfolio live <a href="https://mobina-karimi-portfolio-web.vercel.app/">Here </a>
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
